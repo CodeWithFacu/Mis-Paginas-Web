@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanzamiento Digital Pro | Tu Web en 14 Días</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        details summary::-webkit-details-marker { display:none; }
+        .bg-dot { background-image: radial-gradient(#e5e7eb 1px, transparent 1px); background-size: 20px 20px; }
+        
+        /* Animación personalizada para elementos flotantes */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+
+        /* Micro-interacción suave para botones */
+        .btn-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .btn-hover:hover { transform: scale(1.05) translateY(-2px); }
+    </style>
+</head>
+<body class="font-sans text-slate-900 bg-white selection:bg-brand-600 selection:text-white bg-dot">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-100 transition-all duration-300" id="nav">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 text-2xl font-extrabold tracking-tighter text-brand-900 group cursor-pointer">
+                <span class="bg-brand-600 text-white p-1 rounded-lg transition-transform group-hover:rotate-12">
+                    <i class="fa-solid fa-bolt-lightning px-1"></i>
+                </span>
+                DIGITAL PRO
+            </div>
+            <div class="hidden lg:flex items-center gap-8 font-semibold text-slate-600">
+                <a href="#que-incluye" class="hover:text-brand-600 transition">Servicios</a>
+                <a href="#potenciadores" class="hover:text-brand-600 transition">Estrategia+</a>
+                <a href="#testimonios" class="hover:text-brand-600 transition">Éxito</a>
+                <a href="#contacto" class="bg-brand-900 text-white px-6 py-2.5 rounded-xl hover:bg-brand-700 transition shadow-lg btn-hover">
+                    Agendar Consultoría
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 md:pt-48 md:pb-32 container mx-auto px-6 relative overflow-hidden">
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-brand-100">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
+                    </span>
+                    IMPULSO PARA PROFESIONALES E INDEPENDIENTES
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Tu talento merece una web que <span class="text-brand-600">cierre ventas.</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl" data-aos="fade-up" data-aos-delay="200">
+                    No solo creamos una página; construimos tu ecosistema digital. Claro, efectivo y diseñado para que dejes de buscar clientes y ellos te encuentren a ti.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#contacto" class="bg-brand-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-brand-700 transition-all shadow-xl shadow-brand-600/20 text-center btn-hover">
+                        Empezar mi Proyecto
+                    </a>
+                    <a href="#potenciadores" class="bg-white text-slate-700 border border-slate-200 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-50 transition text-center btn-hover">
+                        Ver funciones extra
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative" data-aos="fade-left" data-aos-duration="1200">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" 
+                     class="rounded-[3rem] shadow-2xl z-10 relative border-8 border-white transform hover:rotate-2 transition-transform duration-500">
+                <div class="absolute -bottom-6 -left-6 bg-accent p-6 rounded-2xl shadow-xl z-20 animate-float text-white font-bold hidden md:block">
+                    <i class="fa-solid fa-star"></i> 100% Personalizado
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="que-incluye" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold text-brand-900 mb-4">Plan Lanzamiento Digital</h2>
+                <p class="text-lg text-slate-600 font-medium">Una estructura sólida diseñada para proyectos que necesitan resultados hoy.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fa-solid fa-pen-ruler text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">Diseño Integral</h3>
+                    <p class="text-sm text-slate-500">Desarrollo de 1 Landing Page potente enfocada en tu rubro específico.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-bullseye text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">Estructura Clara</h3>
+                    <p class="text-sm text-slate-500">Arquitectura pensada para guiar al usuario hacia el objetivo de tu negocio.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-mobile-screen text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">100% Responsive</h3>
+                    <p class="text-sm text-slate-500">Tu web se adaptará perfectamente a celulares, tablets y ordenadores.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-font text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">Contenido Curado</h3>
+                    <p class="text-sm text-slate-500">Textos y visuales adaptados para comunicar profesionalismo desde el primer clic.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-brands fa-whatsapp text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">CTAs Directos</h3>
+                    <p class="text-sm text-slate-500">Botones a WhatsApp y formularios para que no pierdas ningún contacto.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-share-nodes text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">Redes Sociales</h3>
+                    <p class="text-sm text-slate-500">Integración total con tus perfiles para potenciar tu marca personal.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fa-brands fa-github text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">GitHub Ready</h3>
+                    <p class="text-sm text-slate-500">Publicamos el código en GitHub para transparencia y propiedad técnica.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 hover:shadow-2xl transition-all hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="700">
+                    <i class="fa-solid fa-compass text-brand-600 text-3xl mb-6 group-hover:scale-110 transition-transform block"></i>
+                    <h3 class="font-bold text-xl mb-3">Asesoramiento</h3>
+                    <p class="text-sm text-slate-500">Guía completa para contratar dominio y hosting a tu nombre de forma segura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="potenciadores" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <span class="text-brand-600 font-bold uppercase tracking-widest text-sm">Escalabilidad</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-4 mb-8">Lleva tu presencia al siguiente nivel</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-5 p-6 bg-slate-50 rounded-2xl hover:bg-brand-50 transition-colors cursor-default group" data-aos="fade-up" data-aos-delay="100">
+                            <div class="text-brand-600 text-2xl group-hover:scale-125 transition-transform"><i class="fa-solid fa-calendar-days"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Reserva de Citas Pro</h4>
+                                <p class="text-slate-500 text-sm">Integramos tu agenda (Calendly/TidyCal) para que tus clientes reserven sesiones automáticamente.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 p-6 bg-slate-50 rounded-2xl hover:bg-brand-50 transition-colors cursor-default group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-brand-600 text-2xl group-hover:scale-125 transition-transform"><i class="fa-solid fa-magnet"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Lead Magnets / Suscriptores</h4>
+                                <p class="text-slate-500 text-sm">Creamos zonas de descarga gratuita para empezar a captar correos desde el día 1.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="bg-brand-900 rounded-[3rem] p-10 text-white shadow-2xl relative z-10 hover:scale-105 transition-transform duration-500">
+                        <h3 class="text-2xl font-bold mb-6">Tu propia "Bio-Page"</h3>
+                        <p class="text-brand-100 mb-8 leading-relaxed">Olvídate de Linktree. Diseñamos una página optimizada para el enlace de tu biografía dentro de tu propio dominio.</p>
+                        
+                        <div class="space-y-4 max-w-xs mx-auto">
+                            <div class="bg-white/10 p-3 rounded-full text-center font-bold text-sm border border-white/20 animate-pulse">Mi Landing Principal</div>
+                            <div class="bg-white/10 p-3 rounded-full text-center font-bold text-sm border border-white/20">Agendar una Sesión</div>
+                            <div class="bg-brand-600 p-3 rounded-full text-center font-bold text-sm shadow-lg transform hover:scale-110 transition">Descargar Guía Gratis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-extrabold mb-16" data-aos="fade-down">Lo que dicen quienes ya lanzaron</h2>
+            <div class="grid md:grid-cols-3 gap-8 italic">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-accent gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-600 mb-6">"Pasé de explicar mis servicios mil veces por WhatsApp a simplemente pasar mi link. Mis clientes llegan mucho más decididos."</p>
+                    <div class="font-bold not-italic text-brand-900">— Laura S., Psicóloga Online.</div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-accent gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-600 mb-6">"El asesoramiento para el hosting fue clave. No tenía idea de nada técnico y me sentí acompañado en todo el proceso."</p>
+                    <div class="font-bold not-italic text-brand-900">— Marcos G., Consultor IT.</div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex text-accent gap-1 mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-slate-600 mb-6">"La landing se ve increíble en móvil. Logré captar mis primeros 50 suscriptores gracias al lead magnet que instalamos."</p>
+                    <div class="font-bold not-italic text-brand-900">— Elena R., Coach Creativa.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-extrabold text-center mb-12" data-aos="fade-up">Preguntas Comunes</h2>
+        <div class="space-y-4">
+            <details class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 cursor-pointer transition-all duration-300 hover:bg-brand-50" data-aos="fade-up">
+                <summary class="flex justify-between items-center font-bold text-lg list-none">
+                    ¿Cuánto tiempo tarda el proceso?
+                    <i class="fa-solid fa-plus text-brand-600 group-open:rotate-45 transition-transform duration-300"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 border-t border-slate-200 pt-4">Desde que tenemos todo el contenido, el proceso de diseño y desarrollo toma entre 10 y 14 días hábiles.</p>
+            </details>
+            <details class="group bg-slate-50 p-6 rounded-2xl border border-slate-100 cursor-pointer transition-all duration-300 hover:bg-brand-50" data-aos="fade-up" data-aos-delay="100">
+                <summary class="flex justify-between items-center font-bold text-lg list-none">
+                    ¿La página será de mi propiedad?
+                    <i class="fa-solid fa-plus text-brand-600 group-open:rotate-45 transition-transform duration-300"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 border-t border-slate-200 pt-4">Totalmente. El código se entrega vía GitHub y el hosting/dominio siempre están a tu nombre. Tienes el control total.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 text-center overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-brand-50 p-12 rounded-[3rem] border border-brand-100" data-aos="zoom-in">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-8 text-brand-900 leading-tight">Es momento de que el mundo sepa lo que haces.</h2>
+                <p class="text-xl text-slate-600 mb-12 italic">Pocas plazas disponibles este mes para garantizar la máxima calidad en cada proyecto.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="#" class="bg-brand-600 text-white px-12 py-5 rounded-2xl font-extrabold text-xl shadow-2xl hover:bg-brand-700 transition flex items-center gap-3 btn-hover">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                    <a href="#" class="text-brand-600 font-bold hover:underline">Ver otros proyectos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-xl font-bold text-brand-900 mb-4 tracking-tighter uppercase">Digital Pro</div>
+            <p class="text-slate-400 text-sm mb-6">Diseño estratégico para profesionales independientes.</p>
+            <div class="flex justify-center gap-6 text-slate-300">
+                <a href="#" class="hover:text-brand-600 transition hover:scale-125"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                <a href="#" class="hover:text-brand-600 transition hover:scale-125"><i class="fa-brands fa-instagram text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicialización de AOS con configuración optimizada
+        AOS.init({ 
+            duration: 1000, 
+            once: true,
+            mirror: false,
+            anchorPlacement: 'top-bottom'
+        });
+        
+        // Sombra navbar al scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            window.scrollY > 20 ? nav.classList.add('shadow-md', 'py-2') : nav.classList.remove('shadow-md', 'py-2');
+        });
+    </script>
+</body>
+</html>
