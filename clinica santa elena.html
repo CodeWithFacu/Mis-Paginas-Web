@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clínica Santa Elena - Medicina preventiva y atención integral familiar. Tecnología avanzada con enfoque humano.">
+    <title>Clínica Santa Elena | Centro de Salud Preventiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A4D8C;
+            --secondary-blue: #4A90E2;
+            --accent-teal: #00B2A9;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --medium-gray: #E9ECEF;
+            --dark-gray: #495057;
+            --text-dark: #212529;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-teal), var(--secondary-blue));
+            border-radius: 2px;
+        }
+        
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: var(--dark-gray);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 90px 0;
+        }
+        
+        .section-alt {
+            background-color: var(--light-gray);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(10, 77, 140, 0.25);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent-teal), #00CCBB);
+            color: var(--white);
+        }
+        
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 178, 169, 0.25);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+        
+        .mb-3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            padding: 18px 0;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 15px;
+        }
+        
+        .logo-symbol {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-symbol::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50,20 L60,40 L80,45 L65,60 L68,80 L50,70 L32,80 L35,60 L20,45 L40,40 Z' fill='white' opacity='0.9'/%3E%3C/svg%3E") center/70% no-repeat;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .logo-tagline {
+            font-size: 0.85rem;
+            color: var(--dark-gray);
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-teal);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-blue);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0 100px;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--accent-teal);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            color: var(--dark-gray);
+        }
+        
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .hero-feature i {
+            background: linear-gradient(135deg, var(--accent-teal), var(--secondary-blue));
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            background-color: var(--white);
+            padding: 25px 20px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid var(--accent-teal);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-icon {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+        }
+        
+        .service-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: 20px 0;
+            flex-grow: 1;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        /* Team Section - SOLO 3 ESPECIALISTAS */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-8px);
+        }
+        
+        .team-img {
+            height: 280px;
+            overflow: hidden;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-member:hover .team-img img {
+            transform: scale(1.05);
+        }
+        
+        .team-info {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+        
+        .team-info .specialty {
+            color: var(--accent-teal);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .team-info .experience {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Approach Section */
+        .approach-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .approach-visual {
+            position: relative;
+        }
+        
+        .approach-visual img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .approach-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 20px;
+            background-color: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .step:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, var(--accent-teal), var(--secondary-blue));
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        
+        /* Technology Section */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+        
+        .tech-card {
+            background-color: var(--white);
+            padding: 35px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid var(--accent-teal);
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .tech-card i {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-container {
+            max-width: 900px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            padding: 45px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 0 20px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 8rem;
+            color: var(--accent-teal);
+            opacity: 0.15;
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid var(--accent-teal);
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-img i {
+            font-size: 2rem;
+            color: var(--accent-teal);
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .info-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-icon {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary-blue);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--light-gray);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(0, 178, 169, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-teal);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo .logo-symbol {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .footer-logo .logo-name {
+            font-size: 1.4rem;
+            background: linear-gradient(to right, white, #B3E0FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #D0E7FF;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-teal);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-teal);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #B3E0FF;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content,
+            .approach-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.9rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.15rem;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 1.5rem;
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .testimonial {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-symbol"></div>
+                <div class="logo-text">
+                    <span class="logo-name">Clínica Santa Elena</span>
+                    <span class="logo-tagline">Centro de Salud Preventiva</span>
+                </div>
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Turnos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Salud preventiva con <span>tecnología</span> y <span>calidez humana</span></h1>
+                <p>En Clínica Santa Elena, nos dedicamos a cuidar de su salud integralmente, priorizando la prevención, el diagnóstico preciso y el acompañamiento personalizado en cada etapa de la vida.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> Solicitar Turno
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">
+                        <i class="fas fa-stethoscope"></i> Nuestros Servicios
+                    </a>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-user-md"></i>
+                        <span>Especialistas de primer nivel</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Todas las obras sociales</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Turnos rápidos y sin demoras</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>Más de 25 años cuidando familias</h2>
+                    <p>Fundada en 1998, Clínica Santa Elena se ha consolidado como un referente en medicina preventiva y atención integral en la región. Nuestro compromiso es ofrecer un servicio médico de excelencia, combinando tecnología de vanguardia con un trato humano y personalizado.</p>
+                    <p>Creemos en una medicina que previene antes que cura, que acompaña en cada etapa y que entiende al paciente en su totalidad: físico, emocional y social.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <p>Años de experiencia</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <p>Especialidades médicas</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5.200+</div>
+                            <p>Pacientes satisfechos</p>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <p>Guardia permanente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <!-- Imagen corregida del interior de la clínica -->
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Interior moderno de Clínica Santa Elena" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-alt" id="servicios">
+        <div class="container">
+            <h2 class="text-center">Nuestras Especialidades y Servicios</h2>
+            <p class="text-center mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">Ofrecemos una amplia gama de especialidades médicas con equipamiento de última generación y profesionales altamente capacitados.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cardiología y Chequeos Preventivos</h3>
+                        <p>Evaluación cardiovascular completa, pruebas de esfuerzo, holter y prevención de enfermedades cardíacas.</p>
+                        <ul class="service-features">
+                            <li>Consulta cardiológica integral</li>
+                            <li>Electrocardiograma y ecocardiograma</li>
+                            <li>Prueba de esfuerzo</li>
+                            <li>Monitorización Holter</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-accent" style="margin-top: auto;">Solicitar Turno</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Ginecología y Salud de la Mujer</h3>
+                        <p>Atención integral para la mujer en todas las etapas de la vida, con enfoque preventivo y seguimiento personalizado.</p>
+                        <ul class="service-features">
+                            <li>Control ginecológico anual</li>
+                            <li>Ecografías ginecológicas y mamarias</li>
+                            <li>Seguimiento del embarazo</li>
+                            <li>Climaterio y menopausia</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-accent" style="margin-top: auto;">Solicitar Turno</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pediatría y Adolescencia</h3>
+                        <p>Cuidado integral de la salud infantil desde el nacimiento hasta la adolescencia, con énfasis en prevención y desarrollo.</p>
+                        <ul class="service-features">
+                            <li>Control del niño sano</li>
+                            <li>Vacunación según calendario oficial</li>
+                            <li>Desarrollo y crecimiento</li>
+                            <li>Salud adolescente</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-accent" style="margin-top: auto;">Solicitar Turno</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Diagnóstico por Imágenes</h3>
+                        <p>Tecnología de vanguardia para diagnósticos precisos: ecografía, radiología, tomografía y resonancia magnética.</p>
+                        <ul class="service-features">
+                            <li>Ecografías de alta definición</li>
+                            <li>Radiografía digital</li>
+                            <li>Tomografía computada</li>
+                            <li>Resonancia magnética</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-accent" style="margin-top: auto;">Solicitar Turno</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Neurología y Medicina del Sueño</h3>
+                        <p>Diagnóstico y tratamiento de enfermedades neurológicas, trastornos del sueño y cefaleas con abordaje integral.</p>
+                        <ul class="service-features">
+                            <li>Consulta neurológica</li>
+                            <li>Polisomnografía (estudio del sueño)</li>
+                            <li>Electroencefalograma</li>
+                            <li>Tratamiento de migrañas</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-accent" style="margin-top: auto;">Solicitar Turno</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Traumatología y Rehabilitación</h3>
+                        <p>Atención de lesiones músculo-esqueléticas, cirugía ortopédica y programas de rehabilitación personalizados.</p>
+                        <ul class="service-features">
+                            <li>Consulta traumatológica</li>
+                            <li>Cirugía artroscópica</li>
+                            <li>Reemplazo articular</li>
+                            <li>Rehabilitación física</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-accent" style="margin-top: auto;">Solicitar Turno</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section - SOLO 3 ESPECIALISTAS -->
+    <section id="equipo">
+        <div class="container">
+            <h2 class="text-center">Nuestro Equipo Médico</h2>
+            <p class="text-center mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">Profesionales con amplia trayectoria, formación continua y compromiso con la excelencia en la atención médica.</p>
+            
+            <div class="team-grid">
+                <!-- Especialista 1 -->
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra. Valeria Montes">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dra. Valeria Montes</h3>
+                        <p class="specialty">Médica Clínica - Especialista en Medicina Preventiva</p>
+                        <p class="experience">MP: 28.456 | 20 años de experiencia</p>
+                        <p>Directora médica de la clínica. Especializada en medicina interna y prevención cardiovascular.</p>
+                    </div>
+                </div>
+                
+                <!-- Especialista 2 -->
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Andrés Rojas">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Andrés Rojas</h3>
+                        <p class="specialty">Cardiólogo - Especialista en Ecocardiografía</p>
+                        <p class="experience">MP: 32.187 | 18 años de experiencia</p>
+                        <p>Jefe del servicio de Cardiología. Formado en el Hospital Italiano de Buenos Aires.</p>
+                    </div>
+                </div>
+                
+                <!-- Especialista 3 - IMAGEN CORREGIDA -->
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra. Carla Vázquez">
+                    </div>
+                    <div class="team-info">
+                        <h3>Dra. Carla Vázquez</h3>
+                        <p class="specialty">Ginecóloga y Obstetra</p>
+                        <p class="experience">MP: 29.345 | 15 años de experiencia</p>
+                        <p>Especialista en salud integral de la mujer, climaterio y ecografía ginecológica.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Texto explicativo adicional sobre el equipo -->
+            <div style="margin-top: 50px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 15px;">Un equipo multidisciplinario</h3>
+                <p>Nuestros tres especialistas principales trabajan en colaboración con más de 15 profesionales de la salud en distintas áreas, asegurando una atención integral y coordinada para cada paciente. La comunicación fluida entre especialistas nos permite ofrecer diagnósticos precisos y tratamientos efectivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="approach-container">
+                <div class="approach-visual">
+                    <!-- Imagen corregida para la sección de enfoque -->
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Médica explicando diagnóstico a paciente">
+                </div>
+                
+                <div>
+                    <h2>Nuestro Enfoque de Atención</h2>
+                    <p>En Clínica Santa Elena, hemos desarrollado una metodología de atención que prioriza la prevención, el diagnóstico preciso y el acompañamiento continuo.</p>
+                    
+                    <div class="approach-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <h3>Evaluación Integral Inicial</h3>
+                                <p>Realizamos una evaluación completa que considera factores médicos, psicológicos y sociales para entender su salud en contexto.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <h3>Diagnóstico Preciso con Tecnología</h3>
+                                <p>Utilizamos equipamiento de última generación para obtener diagnósticos certeros y minimizar tiempos de espera.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <h3>Plan de Salud Personalizado</h3>
+                                <p>Desarrollamos un plan adaptado a sus necesidades, preferencias y objetivos de salud, involucrándolo activamente.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div>
+                                <h3>Seguimiento Continuo</h3>
+                                <p>Acompañamos su evolución con controles periódicos y ajustamos el tratamiento según sus progresos y necesidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">Tecnología de Vanguardia</h2>
+            <p class="text-center mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">Invertimos continuamente en equipamiento médico avanzado para ofrecer diagnósticos precisos y tratamientos efectivos.</p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fas fa-magnet"></i>
+                    <h3>Resonancia Magnética 3 Tesla</h3>
+                    <p>Sistema de resonancia magnética de alto campo para imágenes de máxima resolución y precisión diagnóstica.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Ecocardiógrafo 4D</h3>
+                    <p>Tecnología de última generación para evaluación cardiovascular completa con imágenes tridimensionales en tiempo real.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <i class="fas fa-laptop-medical"></i>
+                    <h3>Historia Clínica Digital</h3>
+                    <p>Sistema integral de gestión médica que garantiza seguridad, confidencialidad y acceso rápido a la información del paciente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-alt">
+        <div class="container">
+            <h2 class="text-center">Lo que dicen nuestros pacientes</h2>
+            <p class="text-center mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">La confianza de nuestras familias es el mayor reconocimiento a nuestro trabajo.</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Llevo más de 10 años confiando la salud de mi familia a Clínica Santa Elena. La atención es excepcional, los profesionales son de primer nivel y siempre se toman el tiempo para explicar todo con claridad. Cuando mi hija tuvo una lesión deportiva, la atendieron con rapidez y dedicación que marcaron la diferencia en su recuperación."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <p>Paciente desde 2013</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <div class="container">
+            <h2 class="text-center">Solicitar Turno</h2>
+            <p class="text-center mb-4" style="max-width: 800px; margin-left: auto; margin-right: auto;">Estamos aquí para atender sus necesidades de salud. Contáctenos para programar una consulta o resolver sus dudas.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Av. Santa Elena 1875<br>Palermo, Ciudad Autónoma de Buenos Aires</p>
+                            <p style="margin-top: 10px; color: var(--accent-teal); font-weight: 500;">
+                                <i class="fas fa-subway"></i> A 2 cuadras de estación Plaza Italia
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Teléfonos y Horarios</h3>
+                            <p><strong>Turnos:</strong> (011) 4832-1144</p>
+                            <p><strong>Administración:</strong> (011) 4832-1155</p>
+                            <p><strong>Emergencias:</strong> (011) 4832-1199 (24/7)</p>
+                            <p style="margin-top: 10px;"><strong>Horarios:</strong> Lunes a Viernes 8:00-21:00 | Sábados 9:00-13:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h3>Coberturas Médicas</h3>
+                            <p>Trabajamos con las principales obras sociales y prepagas. También atendemos pacientes particulares.</p>
+                            <p style="margin-top: 10px; font-weight: 500; color: var(--accent-teal);">
+                                <i class="fas fa-check-circle"></i> Consulte por su cobertura específica
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Formulario de Turnos Online</h3>
+                    <form id="turnoForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 11 2345-6789">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="ejemplo@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="especialidad">Especialidad requerida *</label>
+                            <select id="especialidad" name="especialidad" required>
+                                <option value="">Seleccione una especialidad</option>
+                                <option value="clinica">Clínica Médica / Medicina Preventiva</option>
+                                <option value="cardiologia">Cardiología</option>
+                                <option value="ginecologia">Ginecología</option>
+                                <option value="pediatria">Pediatría</option>
+                                <option value="traumatologia">Traumatología</option>
+                                <option value="neurologia">Neurología</option>
+                                <option value="diagnostico">Diagnóstico por Imágenes</option>
+                                <option value="otros">Otra especialidad</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Motivo de consulta o mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente el motivo de su consulta..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferencia">Preferencia de horario</label>
+                            <select id="preferencia" name="preferencia">
+                                <option value="">Sin preferencia</option>
+                                <option value="manana">Mañana (8:00-13:00)</option>
+                                <option value="tarde">Tarde (13:00-18:00)</option>
+                                <option value="noche">Noche (18:00-21:00)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">
+                            <i class="fas fa-paper-plane"></i> Enviar Solicitud de Turno
+                        </button>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: var(--dark-gray); text-align: center;">Nos contactaremos dentro de las 24 horas hábiles para confirmar su turno.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-symbol"></div>
+                        <span class="logo-name">Clínica Santa Elena</span>
+                    </div>
+                    <p>Centro de Salud Preventiva con más de 25 años de trayectoria en el cuidado integral de las familias argentinas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Especialidades</h3>
+                    <ul>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Clínica Médica</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Cardiología</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Ginecología</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Pediatría</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Traumatología</a></li>
+                        <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Neurología</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Quiénes Somos</a></li>
+                        <li><a href="#equipo"><i class="fas fa-chevron-right"></i> Equipo Médico</a></li>
+                        <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Solicitar Turno</a></li>
+                        <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Coberturas Médicas</a></li>
+                        <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="#contacto"><i class="fas fa-map-marker-alt"></i> Av. Santa Elena 1875, Palermo, CABA</a></li>
+                        <li><a href="tel:01148321144"><i class="fas fa-phone-alt"></i> (011) 4832-1144</a></li>
+                        <li><a href="mailto:turnos@clinicasantaelena.com"><i class="fas fa-envelope"></i> turnos@clinicasantaelena.com</a></li>
+                        <li><a href="#contacto"><i class="fas fa-clock"></i> Lunes a Viernes: 8:00-21:00</a></li>
+                        <li><a href="#contacto"><i class="fas fa-ambulance"></i> Emergencias: 24/7</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Clínica Santa Elena - Centro de Salud Preventiva. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">Sitio web desarrollado por <strong>HealthWeb Solutions</strong> - Agencia líder en diseño digital para el sector salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            mobileToggle.innerHTML = mainMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking a link
+        const menuLinks = document.querySelectorAll('nav ul li a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Form submission
+        const turnoForm = document.getElementById('turnoForm');
+        
+        turnoForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const nombre = formData.get('nombre');
+            const especialidad = formData.get('especialidad');
+            
+            // Show success message
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2000;
+                padding: 20px;
+            `;
+            
+            modal.innerHTML = `
+                <div style="background-color: white; padding: 40px; border-radius: 15px; max-width: 500px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <div style="color: #00B2A9; font-size: 4rem; margin-bottom: 20px;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 style="color: #0A4D8C; margin-bottom: 15px;">¡Solicitud Enviada!</h2>
+                    <p style="margin-bottom: 25px; font-size: 1.1rem;">Gracias <strong>${nombre}</strong>. Hemos recibido su solicitud de turno para <strong>${especialidad}</strong>.</p>
+                    <p style="margin-bottom: 30px; color: #495057;">Nos contactaremos dentro de las 24 horas hábiles para confirmar día y hora.</p>
+                    <button id="closeModal" style="background: linear-gradient(135deg, #0A4D8C, #4A90E2); color: white; border: none; padding: 12px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 1rem;">
+                        Aceptar
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close modal
+            document.getElementById('closeModal').addEventListener('click', () => {
+                document.body.removeChild(modal);
+                turnoForm.reset();
+            });
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                    turnoForm.reset();
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '12px 0';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.12)';
+            } else {
+                header.style.padding = '18px 0';
+                header.style.boxShadow = '0 3px 15px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
